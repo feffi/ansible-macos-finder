@@ -29,6 +29,7 @@
         - { domain: "NSGlobalDomain", key: "com.apple.springing.delay", type: "float", value: "{{ macos_finder.springload_delay }}", description: "Set the spring loading delay for directories" }
         - { domain: "NSGlobalDomain", key: "com.apple.springing.enabled", type: "boolean", value: "{{ macos_finder.springload }}", description: "Enable spring loading for directories" }
         - { domain: "NSGlobalDomain", key: "NSTableViewDefaultSizeMode", type: "integer", value: "{{ macos_finder.sidebar_size }}", description: "Set Sidebar Icon Size" }
+        - { domain: "NSGlobalDomain", key: "NSDocumentSaveNewDocumentsToCloud", type: "boolean", value: "{{ macos_finder.default_target_icloud }}", description: "Sets default save target to be iCloud" }
 
 - name: Remove duplicates in the 'Open With' menu (also see 'lscleanup' alias)
   become: true

@@ -100,6 +100,9 @@ macos_finder:
 
   # Show the ~/Library folder
   hide_library_folder: false
+
+  # Sets default save target to be a local disk, not iCloud
+  default_target_icloud: false
 ```
 
 ## Dependencies
@@ -137,6 +140,7 @@ None.
           sidebar_size: 1
           remove_duplicates: true
           hide_library_folder: false
+          default_target_icloud: false
       roles:
         - { role: feffi.macos-finder }
 ```
@@ -172,7 +176,8 @@ Or with local parameters:
               springload_delay: 0,
               sidebar_size: 1,
               remove_duplicates: true,
-              hide_library_folder: false
+              hide_library_folder: false,
+              default_target_icloud: false
             }
           }
 ```

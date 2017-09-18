@@ -77,3 +77,6 @@ macos_finder:
 
   # Show the ~/Library folder
   hide_library_folder: false
+
+  # Sets default save target to be a local disk, not iCloud
+  default_target_icloud: false

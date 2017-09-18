@@ -30,5 +30,6 @@
       sidebar_size: 1
       remove_duplicates: true
       hide_library_folder: false
+      default_target_icloud: false
   roles:
     - ansible-macos-finder
