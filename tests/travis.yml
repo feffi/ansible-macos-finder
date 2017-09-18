@@ -1,0 +1,34 @@
+---
+- hosts: 127.0.0.1
+  connection: local
+  vars:
+    DEBUG: true
+    macos_finder:
+      all_files: true
+      show_path: true
+      animated: false
+      secure_trash: true
+      search_current_default: "SCcf"
+      warning_change_ext: false
+      view_mode: "clmv"
+      default_location: "PfLo"
+      default_location_path: "file://${HOME}"
+      select_quicklook: true
+      allow_quit_finder: true
+      show_external_drives: true
+      show_harddrives: true
+      show_servers: true
+      show_removables: true
+      show_pathbar: true
+      show_statusbar: true
+      warn_trash_empty: false
+      ds_files: false
+      airdrop: true
+      extensions: true
+      springload: true
+      springload_delay: 0
+      sidebar_size: 1
+      remove_duplicates: true
+      hide_library_folder: false
+  roles:
+    - ansible-macos-finder

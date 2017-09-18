@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Kevin Wennemuth
+  description: Ansible role to manage finder settings in macOS.
+  license: MIT
+  min_ansible_version: 2.3
+  platforms:
+    - name: Darwin
+      versions:
+        - all
+  galaxy_tags:
+    - system
+    - osx
+    - config
+    - finder
+dependencies:
+  - { role: feffi.macos-defaults,
+      macos_defaults: {
+        defaults: []
+      }
+    }
