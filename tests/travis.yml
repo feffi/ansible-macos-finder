@@ -32,4 +32,4 @@
       hide_library_folder: false
       default_target_icloud: false
   roles:
-    - ansible-macos-finder
+    - { role: ansible-macos-finder }
