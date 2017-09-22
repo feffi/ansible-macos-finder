@@ -27,7 +27,7 @@
         - { domain: "com.apple.NetworkBrowser", key: "BrowseAllInterfaces", type: "boolean", value: "{{ macos_finder.airdrop }}", description: "Enable AirDrop over Ethernet and on unsupported Macs running Lion" }
         - { domain: "NSGlobalDomain", key: "AppleShowAllExtensions", type: "boolean", value: "{{ macos_finder.extensions }}", description: "Show all filename extensions" }
         - { domain: "NSGlobalDomain", key: "com.apple.springing.delay", type: "float", value: "{{ macos_finder.springload_delay }}", description: "Set the spring loading delay for directories" }
-        - { domain: "NSGlobalDomain", key: "com.apple.springing.enabled", type: "boolean", value: "{{ macos_finder.springload }}", description: "Enable spring loading for directories" }
+        - { domain: "NSGlobalDomain", key: "com.apple.springing.enabled", type: "boolean", value: "{{ macos_finder.springload | ternary(1,0) }}", description: "Enable spring loading for directories" }
         - { domain: "NSGlobalDomain", key: "NSTableViewDefaultSizeMode", type: "integer", value: "{{ macos_finder.sidebar_size }}", description: "Set Sidebar Icon Size" }
         - { domain: "NSGlobalDomain", key: "NSDocumentSaveNewDocumentsToCloud", type: "boolean", value: "{{ macos_finder.default_target_icloud }}", description: "Sets default save target to be iCloud" }
 
