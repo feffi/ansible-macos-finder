@@ -45,3 +45,8 @@
   become: true
   command: "chflags hidden ~/Library"
   when: macos_finder.hide_library_folder
+
+- name: Restart Finder
+  shell: "killall Finder"
+  ignore_errors: true
+  failed_when: false
