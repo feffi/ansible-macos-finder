@@ -50,3 +50,4 @@
   shell: "killall Finder"
   ignore_errors: true
   failed_when: false
+  changed_when: false
