@@ -35,19 +35,26 @@
   become: true
   command: "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user"
   when: macos_finder.remove_duplicates
+  changed_when: false
+
+- name: Determining ~/Library hidden status
+  shell: "ls -aOl ~/Library | grep r | head -n 1 | awk -F' ' '{ print $5 }'"
+  register: library_stat
+  changed_when: false
 
 - name: "Show the ~/Library folder"
   become: true
   command: "chflags nohidden ~/Library"
-  when: not macos_finder.hide_library_folder
+  when: "not macos_finder.hide_library_folder and 'hidden' not in library_stat.stdout"
+  register: deb
 
 - name: "Hide the ~/Library folder"
   become: true
   command: "chflags hidden ~/Library"
-  when: macos_finder.hide_library_folder
+  when: "macos_finder.hide_library_folder and 'hidden' in library_stat.stdout"
 
-- name: Restart Finder
-  shell: "killall Finder"
-  ignore_errors: true
-  failed_when: false
-  changed_when: false
+#- name: Restart Finder
+#  shell: "killall Finder"
+#  ignore_errors: true
+#  failed_when: false
+#  changed_when: false
