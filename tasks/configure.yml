@@ -30,6 +30,20 @@
         - { domain: "NSGlobalDomain", key: "com.apple.springing.enabled", type: "boolean", value: "{{ macos_finder.springload | ternary(1,0) }}", description: "Enable spring loading for directories" }
         - { domain: "NSGlobalDomain", key: "NSTableViewDefaultSizeMode", type: "integer", value: "{{ macos_finder.sidebar_size }}", description: "Set Sidebar Icon Size" }
         - { domain: "NSGlobalDomain", key: "NSDocumentSaveNewDocumentsToCloud", type: "boolean", value: "{{ macos_finder.default_target_icloud }}", description: "Sets default save target to be iCloud" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:arrangeBy", type: "string", value: "{{ macos_finder.icon_snap_mode }}", description: "Enable snap-to-grid for icons on the desktop" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:gridSpacing", type: "float", value: "{{ macos_finder.grid_spacing }}", description: "Increase grid spacing for icons on the desktop" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:iconSize", type: "float", value: "{{ macos_finder.icon_size }}", description: "Increase the size of icons on the desktop" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:labelOnBottom", type: "boolean", value: "{{ macos_finder.icon_label_bottom }}", description: "Icon label position: true = bottom, false = right" }
+        - { domain: "com.apple.finder", key: "DesktopViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: "{{ macos_finder.icon_show_info }}", description: "Show item info near icons on the desktop" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:arrangeBy", type: "string", value: "{{ macos_finder.icon_snap_mode }}", description: "Enable snap-to-grid for icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:gridSpacing", type: "float", value: "{{ macos_finder.grid_spacing }}", description: "Increase grid spacing for icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:iconSize", type: "float", value: "{{ macos_finder.icon_size }}", description: "Increase the size of icons in finder icon views" }
+        - { domain: "com.apple.finder", key: "FK_StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: "{{ macos_finder.icon_show_info }}", description: "Show item info near icons in finder icon view" }
+        - { domain: "com.apple.finder", key: "FXInfoPanesExpanded", type: "dict", value: { Privileges: true, MetaData: true, Comments: true, OpenWith: true, Preview: false, Name: true, General: true }, description: "Expand the following File Info panes: 'General', 'Open with', and 'Sharing & Permissions'" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:arrangeBy", type: "string", value: "{{ macos_finder.icon_snap_mode }}", description: "Enable snap-to-grid for icons in other icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:gridSpacing", type: "float", value: "{{ macos_finder.grid_spacing }}", description: "Increase grid spacing for icons in other icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:iconSize", type: "float", value: "{{ macos_finder.icon_size }}", description: "Increase the size of icons in other icon views" }
+        - { domain: "com.apple.finder", key: "StandardViewSettings:IconViewSettings:showItemInfo", type: "boolean", value: "{{ macos_finder.icon_show_info }}", description: "Show item info near icons other icon views" }
 
 - name: Remove duplicates in the 'Open With' menu (also see 'lscleanup' alias)
   become: true

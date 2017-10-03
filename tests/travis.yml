@@ -31,5 +31,10 @@
       remove_duplicates: true
       hide_library_folder: false
       default_target_icloud: false
+      icon_snap_mode: "grid"
+      icon_size: 80
+      grid_spacing: 100
+      icon_show_info: true
+      icon_label_bottom: true
   roles:
     - { role: ansible-macos-finder }

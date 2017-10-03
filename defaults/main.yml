@@ -18,7 +18,7 @@ macos_finder:
   # Set warning when changing a file extension
   warning_change_ext: false
 
-  # Set Finder view mode: 'icnv', 'clmv', 'Flwv'
+  # Set Finder view mode, Icon View = `icnv`, List View = `Nlsv`, Column View = `clmv`, Cover Flow = `Flwv`
   view_mode: "clmv"
 
   # Set Default Finder Location
@@ -80,3 +80,42 @@ macos_finder:
 
   # Sets default save target to be a local disk, not iCloud
   default_target_icloud: false
+
+  # Enable snap-to-grid for icons on the desktop
+  icon_snap_mode: "grid"
+
+  # Size of icons in pixel
+  icon_size: 80
+
+  # Grid spacing for icons in pixel
+  grid_spacing: 100
+
+  # Show item info near icons
+  icon_show_info: true
+
+  # Icon label position: true = bottom, false = right
+  icon_label_bottom: true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
