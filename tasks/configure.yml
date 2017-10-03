@@ -5,6 +5,9 @@
   vars:
     macos_defaults:
       defaults:
+        - { domain: "com.apple.finder", key: "SidebarWidth", type: "integer", value: "{{ macos_finder.sidebar_width }}", description: "Set Finder sidebar width in pixel" }
+        - { domain: "com.apple.finder", key: "ShowSidebar", type: "boolean", value: "{{ macos_finder.sidebar_show }}", description: "Show sidebar in Finder" }
+        - { domain: "com.apple.finder", key: "_FXSortFoldersFirst", type: "boolean", value: "{{ macos_finder.sort_folder_first }}", description: "Show folders before files" }
         - { domain: "com.apple.finder", key: "AppleShowAllFiles", type: "boolean", value: "{{ macos_finder.all_files }}", description: "Show Hidden Files" }
         - { domain: "com.apple.finder", key: "_FXShowPosixPathInTitle", type: "boolean", value: "{{ macos_finder.show_path }}", description: "Show Full Path in Finder Title" }
         - { domain: "com.apple.finder", key: "DisableAllAnimations", type: "boolean", value: "{{ not macos_finder.animated }}", description: "Window animations and Get Info animations" }

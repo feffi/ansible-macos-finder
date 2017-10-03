@@ -1,5 +1,8 @@
 ---
 macos_finder:
+  # Show folders before files
+  sort_folder_first: true
+
   # Show Hidden Files
   all_files: true
 
@@ -96,26 +99,8 @@ macos_finder:
   # Icon label position: true = bottom, false = right
   icon_label_bottom: true
 
+  # Show sidebar in Finder
+  sidebar_show: true
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  # Set Finder sidebar width in pixel
+  sidebar_width: 134

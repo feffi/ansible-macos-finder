@@ -23,6 +23,9 @@ All role based variables are listed below, along with default values:
 
 ```yaml
 macos_finder:
+  # Show folders before files
+  sort_folder_first: true
+
   # Show Hidden Files
   all_files: true
 
@@ -118,6 +121,12 @@ macos_finder:
 
   # Icon label position: true = bottom, false = right
   icon_label_bottom: true
+
+  # Show sidebar in Finder
+  sidebar_show: true
+
+  # Set Finder sidebar width in pixel
+  sidebar_width: 134
 ```
 
 ## Dependencies
@@ -129,6 +138,7 @@ None.
     - hosts: all
       vars:
         macos_finder:
+          sort_folder_first: true
           all_files: true
           show_path: true
           animated: false
@@ -161,6 +171,8 @@ None.
           grid_spacing: 100
           icon_show_info: true
           icon_label_bottom: true
+          sidebar_show: true
+          sidebar_width: 134
       roles:
         - { role: feffi.macos-finder }
 ```
@@ -171,6 +183,7 @@ Or with local parameters:
       roles:
         - { role: feffi.macos-finder,
             macos_finder: {
+              sort_folder_first: true,
               all_files: true,
               show_path: true,
               animated: false,
@@ -202,7 +215,9 @@ Or with local parameters:
               icon_size: 80,
               grid_spacing: 100,
               icon_show_info: true,
-              icon_label_bottom: true
+              icon_label_bottom: true,
+              sidebar_show: true,
+              sidebar_width: 134
             }
           }
 ```

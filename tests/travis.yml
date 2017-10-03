@@ -4,6 +4,7 @@
   vars:
     DEBUG: true
     macos_finder:
+      sort_folder_first: true
       all_files: true
       show_path: true
       animated: false
@@ -36,5 +37,7 @@
       grid_spacing: 100
       icon_show_info: true
       icon_label_bottom: true
+      sidebar_show: true
+      sidebar_width: 134
   roles:
     - { role: ansible-macos-finder }
