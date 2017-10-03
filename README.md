@@ -127,6 +127,9 @@ macos_finder:
 
   # Set Finder sidebar width in pixel
   sidebar_width: 134
+
+  # Group files by Kind, Name, Application, Date Last Opened, Date Added, Date Modified, Date Created, Size, Tags, None
+  group_by: "Kind"
 ```
 
 ## Dependencies
@@ -173,6 +176,7 @@ None.
           icon_label_bottom: true
           sidebar_show: true
           sidebar_width: 134
+          group_by: "Kind"
       roles:
         - { role: feffi.macos-finder }
 ```
@@ -217,7 +221,8 @@ Or with local parameters:
               icon_show_info: true,
               icon_label_bottom: true,
               sidebar_show: true,
-              sidebar_width: 134
+              sidebar_width: 134,
+              group_by: "Kind"
             }
           }
 ```

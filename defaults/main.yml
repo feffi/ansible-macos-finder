@@ -104,3 +104,6 @@ macos_finder:
 
   # Set Finder sidebar width in pixel
   sidebar_width: 134
+
+  # Group files by Kind, Name, Application, Date Last Opened, Date Added, Date Modified, Date Created, Size, Tags, None
+  group_by: "Kind"
