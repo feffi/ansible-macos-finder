@@ -9,6 +9,7 @@
         - { domain: "com.apple.finder", key: "ShowSidebar", type: "boolean", value: "{{ macos_finder.sidebar_show }}", description: "Show sidebar in Finder" }
         - { domain: "com.apple.finder", key: "_FXSortFoldersFirst", type: "boolean", value: "{{ macos_finder.sort_folder_first }}", description: "Show folders before files" }
         - { domain: "com.apple.finder", key: "AppleShowAllFiles", type: "boolean", value: "{{ macos_finder.all_files }}", description: "Show Hidden Files" }
+        - { domain: "NSGlobalDomain", key: "AppleShowAllFiles", type: "boolean", value: "{{ macos_finder.all_files }}", description: "Show Hidden in all dialogues" }
         - { domain: "com.apple.finder", key: "_FXShowPosixPathInTitle", type: "boolean", value: "{{ macos_finder.show_path }}", description: "Show Full Path in Finder Title" }
         - { domain: "com.apple.finder", key: "DisableAllAnimations", type: "boolean", value: "{{ not macos_finder.animated }}", description: "Window animations and Get Info animations" }
         - { domain: "com.apple.finder", key: "EmptyTrashSecurely", type: "boolean", value: "{{ macos_finder.secure_trash }}", description: "Empty Trash securely by default" }
