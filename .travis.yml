@@ -4,8 +4,6 @@ cache: pip
 os: osx
 rvm: 2.3.1
 osx_image:
-  - xcode9
-  - xcode9.1
   - xcode9.2
 
 install:
